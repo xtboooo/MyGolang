@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	// + - * / % 
+	// + - * / %
 	a := 10
 	b := 20
 	fmt.Printf("(a + b): %v\n", (a + b))
@@ -56,6 +56,6 @@ func main() {
 	j := 200
 	j = 300
 	fmt.Printf("j: %v\n", j)
-	j+= 100 // j = j +100
+	j += 100 // j = j +100
 	fmt.Printf("j: %v\n", j)
 }
