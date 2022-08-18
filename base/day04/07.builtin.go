@@ -33,7 +33,7 @@ func testPanic() {
 	fmt.Println("end...")
 }
 
-func tetsNew() {
+func testNew() {
 	b := new(bool)
 	fmt.Printf("b: %T\n", b)
 	fmt.Printf("b: %v\n", *b)
