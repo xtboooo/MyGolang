@@ -135,7 +135,7 @@ func main() {
 	sort.Sort(ls)
 	fmt.Printf("ls: %v\n", ls) // ls: [map[a:2 b:14] map[a:3 b:13] map[a:4 b:12]] */
 
-	ls := testSlice3{
+	ls := testSlice3	{
 		{Name: "n1", Age: 12},
 		{Name: "n2", Age: 11},
 		{Name: "n3", Age: 10},
