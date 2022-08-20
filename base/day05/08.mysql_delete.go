@@ -1,4 +1,4 @@
-package main
+/* package main
 
 import (
 	"database/sql"
@@ -44,3 +44,4 @@ func main() {
 	}
 	delete()
 }
+ */

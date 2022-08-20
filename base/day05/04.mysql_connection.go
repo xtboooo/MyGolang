@@ -1,4 +1,4 @@
-package main
+/* package main
 
 import (
 	"database/sql"
@@ -49,3 +49,4 @@ func main() {
 		fmt.Println("连接成功!")
 	}
 }
+ */

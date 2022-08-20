@@ -1,4 +1,4 @@
-package main
+/* package main
 
 import (
 	"fmt"
@@ -7,8 +7,9 @@ import (
 	"gorm.io/gorm"
 )
 
+// 模型 model
 type Product struct {
-	gorm.Model
+	gorm.Model // 继承
 	Code  string
 	Price int
 }
@@ -64,3 +65,4 @@ func main() {
 	// update_data(db)
 	delete_data(db)
 }
+ */

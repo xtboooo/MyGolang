@@ -1,4 +1,4 @@
-package main
+/* package main
 
 import (
 	"database/sql"
@@ -55,3 +55,4 @@ func main() {
 	// insert()
 	insert2("b", "b1234")
 }
+ */
