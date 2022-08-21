@@ -20,20 +20,33 @@ func init() {
 
 type User struct {
 	gorm.Model
-	CreditCards []CreditCard
+	Languages []Language `gorm:"many2many:user_languages;"`
 }
 
-type CreditCard struct {
+type Language struct {
 	gorm.Model
-	Number string
-	UserID uint
+	Name string
 }
 
 func createTable() {
-	db.AutoMigrate(&User{}, &CreditCard{})
+	db.AutoMigrate(&User{}, &Language{})
+}
+
+func insert() {
+	l1 := Language{
+		Name: "english",
+	}
+	l2 := Language{
+		Name: "chinese",
+	}
+	user := User{
+		Languages: []Language{l1, l2},
+	}
+	db.Create(&user)
 }
 
 func main() {
-	createTable()
+	// createTable()
+	insert()
 }
  */
