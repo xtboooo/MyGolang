@@ -47,8 +47,47 @@ func f3() {
 	fmt.Printf("tom: %v\n", *tom) // tom: {10 tom 21}
 }
 
+// 结构体内存布局
+func f4() {
+	type test struct {
+		a int8
+		b int8
+		c int8
+		d int8
+	}
+	n := test{
+		1, 2, 3, 4,
+	}
+	fmt.Printf("n.a %p\n", &n.a) // n.a 0xc000124004
+	fmt.Printf("n.b %p\n", &n.b) // n.b 0xc000124005
+	fmt.Printf("n.c %p\n", &n.c) // n.c 0xc000124006
+	fmt.Printf("n.d %p\n", &n.d) // n.d 0xc000124007
+}
+
+func f5() {
+	type student struct {
+		name string
+		age  int
+	}
+	m := make(map[string]*student)
+	students := []student{
+		{name: "pprof.cn", age: 18},
+		{name: "测试", age: 23},
+		{name: "博客", age: 28},
+	}
+
+	for _, stu := range students {
+		m[stu.name] = &stu
+	}
+	for k, v := range m {
+		fmt.Println(k, "=>", v.name)
+	}
+}
+
 func main() {
-	f1()
-	f2()
-	f3()
+	// f1()
+	// f2()
+	// f3()
+	// f4()
+	f5()
 }

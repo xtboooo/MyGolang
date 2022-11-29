@@ -37,6 +37,7 @@ func (per Person4) showPerson5() {
 func (per *Person4) showPerson6() {
 	// per.name 自动解引用  (*per).name = "tom .. "
 	per.name = "tom ..."
+
 }
 func main() {
 	p1 := Person4{

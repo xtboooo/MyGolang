@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func f1() {
 	var ip *int
 	fmt.Printf("ip: %v\n", ip) // nil
 	fmt.Printf("ip: %T\n", ip)
@@ -23,4 +23,19 @@ func main() {
 	bp = &b
 	fmt.Printf("bp: %T\n", bp)
 	fmt.Printf("bp: %v\n", *bp)
+}
+
+
+func f2()  {
+	a :=10
+    b :=&a
+    fmt.Printf("a:%d ptr:%p\n", a,&a)
+    fmt.Printf("b:%p type:%T\n", b, b)
+    fmt.Println(&b)
+}
+
+func main() {
+	// f1()
+	f2()
+
 }

@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
 func main() {
@@ -42,15 +41,15 @@ func main() {
 	   	fmt.Printf("%v\n", buffer.String()) */
 
 	/* 	// 转义字符
-	   	hello :="hello"
+	   	hello := "hello"
 	   	print(hello + "\n")
 	   	print(hello)
 
-	   	s := "hello \t world"
-	   	fmt.Printf("s: %v\n", s)
+	   	s1 := "hello \t world"
+	   	fmt.Printf("1: %v\n", s1)
 
-	   	s:= "c:\\programs file\\a"
-	   	fmt.Printf("s: %v\n", s) */
+	   	s2 := "c:\\programs file\\a"
+	   	fmt.Printf("s2: %v\n", s2) */
 
 	/* 	// 字符串的切片操作
 	   	s := "hello world"
@@ -62,14 +61,24 @@ func main() {
 	   	fmt.Printf("s[0:b]: %v\n", s[0:b]) */
 
 	// 字符串函数 len
-	s := "Hello World" 
-	fmt.Printf("len(s): %v\n", len(s))
-	fmt.Printf("strings.Split(s, \" \"): %v\n", strings.Split(s, " "))
-	fmt.Printf("strings.Contains(\"hello\"): %v\n", strings.Contains(s, "hello"))
-	fmt.Printf("strings.ToLower(s): %v\n", strings.ToLower(s))
-	fmt.Printf("strings.ToUpper(s): %v\n", strings.ToUpper(s))
-	fmt.Printf("strings.HasPrefix(s, \"hello\"): %v\n", strings.HasPrefix(s, "Hello"))
-	fmt.Printf("strings.HasSuffix(s, \"World\"): %v\n", strings.HasSuffix(s, "world"))
-	fmt.Printf("strings.Index(s, \"ll\"): %v\n", strings.Index(s, "ll"))
-}
+	// s := "Hello World"
+	// fmt.Printf("len(s): %v\n", len(s))
+	// fmt.Printf("strings.Split(s, \" \"): %v\n", strings.Split(s, " "))
+	// fmt.Printf("strings.Contains(\"hello\"): %v\n", strings.Contains(s, "hello"))
+	// fmt.Printf("strings.ToLower(s): %v\n", strings.ToLower(s))
+	// fmt.Printf("strings.ToUpper(s): %v\n", strings.ToUpper(s))
+	// fmt.Printf("strings.HasPrefix(s, \"hello\"): %v\n", strings.HasPrefix(s, "Hello"))
+	// fmt.Printf("strings.HasSuffix(s, \"World\"): %v\n", strings.HasSuffix(s, "world"))
+	// fmt.Printf("strings.Index(s, \"ll\"): %v\n", strings.Index(s, "ll"))
 
+	s1 := "hello"
+	// 强制类型转换
+	byteS1 := []byte(s1)
+	byteS1[0] = 'H'
+	fmt.Println(string(byteS1))
+
+	s2 := "博客"
+	runeS2 := []rune(s2)
+	runeS2[0] = '骇'
+	fmt.Println(string(runeS2))
+}

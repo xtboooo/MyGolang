@@ -31,7 +31,6 @@ func main() {
 	// fmt.Printf("a3: %v\n", a3)
 
 	// iota _ 跳过
-
 	// const (
 	// 	a1 = iota
 	// 	_

@@ -14,7 +14,7 @@ func f1() {
 	fmt.Printf("a1[0]: %v\n", a1[0])
 	fmt.Printf("a1[1]: %v\n", a1[1])
 
-	// 数组长度越界
+	// 数组长度越界 invalid argument: index 3 out of bounds [0:2]
 	// a1[3] = 3000
 }
 
@@ -24,6 +24,7 @@ func f2() {
 	fmt.Printf("len(a1): %v\n", len(a1))
 	var a2 = [...]int{1, 2, 3, 4, 5}
 	fmt.Printf("len(a2): %v\n", len(a2))
+	fmt.Printf("cap(a2): %v\n", cap(a2))	
 }
 
 // 数组的遍历 根据长度和下标
@@ -44,7 +45,7 @@ func f4() {
 
 func main() {
 	// f1()
-	// f2()
+	f2()
 	// f3()
-	f4()
+	// f4()
 }

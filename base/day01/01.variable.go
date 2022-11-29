@@ -1,7 +1,6 @@
 package main
 
 import (
-	"MyGolang/user"
 	"fmt"
 )
 
@@ -10,8 +9,6 @@ func getNameAndAge() (string, int) {
 }
 
 func main() {
-	fmt.Printf("user.Hello(): %v\n", user.Hello())
-
 	// var 变量声明
 	// var name string
 	// var age int
